@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Random Number Generator</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Random Number Generator</h1>
+    <button onclick="generateRandomNumber()">Generate Random Number</button>
+    <p id="random-number"></p>
+  </div>
+
+  <script>
+    async function generateRandomNumber() {
+      const response = await fetch('/api/random');
+      const data = await response.json();
+      document.getElementById('random-number').innerText = `Random Number: ${data.number}`;
+    }
+  </script>
+</body>
+</html>
