@@ -8,3 +8,8 @@ user-friendly web applications.
 
 The app serves purposes ranging from generating lottery numbers to creating secure passwords, demonstrating my
 versatility in addressing diverse user needs through technology.
+
+
+# server.js
+
+path.join first argument should be __dirname
